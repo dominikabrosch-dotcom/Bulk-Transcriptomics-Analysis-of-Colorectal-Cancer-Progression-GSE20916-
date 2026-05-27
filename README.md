@@ -61,6 +61,8 @@ library(ggrepel)
 
 Principal Component Analysis (PCA) was performed to evaluate transcriptomic separation between biological groups.
 
+![PCA_Plots](figures/1_PCA_plots.png)
+
 ### Observation
 
 - Normal samples clustered separately from tumor samples
@@ -82,15 +84,12 @@ Genes were filtered based on:
 - adjusted p-value < 0.05
 - |logFC| > 1
 
-
-PCA and Volcano plots
-
-![PCA_and_Volcano Plots](figures/1_PCA_and_Volcano_Plots.png)
-
 ---
 
 ## 4. Volcano Plots
 Volcano plots were generated to visualize significantly upregulated and downregulated genes.
+
+![Volcano Plots](figures/2_Volcano_Plots.png)
 
 ### Key observations
 - Cancer vs Normal showed the strongest transcriptomic differences
@@ -102,7 +101,7 @@ Volcano plots were generated to visualize significantly upregulated and downregu
 ## 5. Heatmap Analysis
 Top differentially expressed genes were visualized using a heatmap.
 
-![Heatmap_Analysis](figures/2_Heatmap_Analysis.png)
+![Heatmap_Analysis](figures/3_Heatmap_Analysis.png)
 
 ### Key observations
 - Normal samples formed a distinct expression cluster
@@ -119,10 +118,10 @@ Top differentially expressed genes were visualized using a heatmap.
 Gene Ontology (GO) and KEGG enrichment analyses were performed using clusterProfiler.
 
 GO enrichment dotplots
-![GO_dotplots](figures/3_GO_dotplots.png)
+![GO_dotplots](figures/4_GO_dotplots.png)
 
 KEGG pathway analysis
-![KEGG_dotplots](figures/4_KEGG_dotplots.png)
+![KEGG_dotplots](figures/5_KEGG_dotplots.png)
 
 ### Biological processes identified
 Examples included:
