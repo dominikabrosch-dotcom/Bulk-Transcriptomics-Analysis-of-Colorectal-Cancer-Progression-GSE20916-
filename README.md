@@ -97,6 +97,8 @@ Volcano plots were generated to visualize significantly upregulated and downregu
 ## 5. Heatmap Analysis
 Top differentially expressed genes were visualized using a heatmap.
 
+![2_Heatmap_Analysis.png](figures/2_Heatmap_Analysis.png)
+
 ### Key observations
 - Normal samples formed a distinct expression cluster
 - Adenoma and carcinoma samples showed more similar expression profiles
