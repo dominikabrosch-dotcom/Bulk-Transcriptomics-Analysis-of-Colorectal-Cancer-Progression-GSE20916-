@@ -162,7 +162,7 @@ This project demonstrates practical experience with:
 - Data visualization in R
 - Biological interpretation of transcriptomic data
 
-—
+—--
 
 # Future Improvements
 - Potential future extensions:
