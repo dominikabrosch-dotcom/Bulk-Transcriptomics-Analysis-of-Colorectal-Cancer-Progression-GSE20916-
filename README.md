@@ -84,7 +84,8 @@ Genes were filtered based on:
 
 
 PCA and Volcano plots
-![PCA_and_Volcano Plots](figures/1_PCA_and_Volcano Plots.png)
+
+![PCA_and_Volcano Plots](figures/1_PCA_and_Volcano_Plots.png)
 
 ---
 
@@ -118,10 +119,10 @@ Top differentially expressed genes were visualized using a heatmap.
 Gene Ontology (GO) and KEGG enrichment analyses were performed using clusterProfiler.
 
 GO enrichment dotplots
-![GO_enrichment_dotplots](figures/3_GO_enrichment_dotplots.png)
+![GO_dotplots](figures/3_GO_dotplots.png)
 
 KEGG pathway analysis
-![KEGG_pathway_analysis](figures/4_KEGG_pathway_analysis.png)
+![KEGG_dotplots](figures/4_KEGG_dotplots.png)
 
 ### Biological processes identified
 Examples included:
