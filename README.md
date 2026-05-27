@@ -124,4 +124,4 @@ Possible extensions of this project include:
 
 ## Summary
 
-This project demonstrates a complete bulk transcriptomics workflow in R, including data acquisition, preprocessing, differential expression analysis, visualization, functional enrichment, and biological interpretation. It is suitable as a portfolio project for bioinformatics, computational biology, or biomedical data science applications.
+This project demonstrates a complete bulk transcriptomics workflow in R.
