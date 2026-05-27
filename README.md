@@ -16,8 +16,9 @@ Main steps included:
 * Sample grouping into Normal, Adenoma, and Cancer groups
 * Quality control and exploratory analysis using PCA
 * Differential expression analysis with `limma`
+* Probe-to-gene annotation
 * Volcano plot visualization with upregulated, downregulated, and non-significant genes
-* Probe-to-gene annotation and gene-level heatmap visualization
+* Gene-level heatmap visualization
 * GO Biological Process enrichment analysis using `clusterProfiler`
 * KEGG pathway enrichment analysis
 * Enrichment network visualization with `enrichplot`
