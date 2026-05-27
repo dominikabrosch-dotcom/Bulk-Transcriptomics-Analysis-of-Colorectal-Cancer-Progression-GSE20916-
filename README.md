@@ -113,6 +113,12 @@ Top differentially expressed genes were visualized using a heatmap.
 ## 6. Functional Enrichment Analysis
 Gene Ontology (GO) and KEGG enrichment analyses were performed using clusterProfiler.
 
+GO enrichment dotplots
+![3_GO_enrichment_dotplots.png](figures/3_GO_enrichment_dotplots.png)
+
+KEGG pathway analysis
+![4_KEGG_pathway_analysis.png](figures/4_KEGG_pathway_analysis.png)
+
 ### Biological processes identified
 Examples included:
 - extracellular matrix organization
