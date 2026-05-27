@@ -61,7 +61,7 @@ library(ggrepel)
 
 Principal Component Analysis (PCA) was performed to evaluate transcriptomic separation between biological groups.
 
-![PCA_Plots](figures/1_PCA_plots.png)
+![PCA_Plots](figures/1_PCA_plot.png)
 
 ### Observation
 
@@ -89,7 +89,7 @@ Genes were filtered based on:
 ## 4. Volcano Plots
 Volcano plots were generated to visualize significantly upregulated and downregulated genes.
 
-![Volcano Plots](figures/2_Volcano_Plots.png)
+![Volcano Plots](figures/2_Volcano_plots.png)
 
 ### Key observations
 - Cancer vs Normal showed the strongest transcriptomic differences
