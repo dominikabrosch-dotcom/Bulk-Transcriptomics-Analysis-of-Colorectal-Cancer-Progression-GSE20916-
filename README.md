@@ -1,178 +1,126 @@
-# Bulk-Transcriptomics-Analysis-of-Colorectal-Cancer-Progression-GSE20916-
-This project presents a bulk transcriptomic analysis of the GEO dataset GSE20916 using R and Bioconductor packages. The analysis investigates transcriptomic differences between normal tissue, adenoma and carcinoma samples.
+# Bulk Transcriptomics Analysis of Colorectal Cancer Progression (GSE20916)
 
-The workflow includes:
-- GEO data acquisition
-- Data preprocessing and quality control
-- Principal Component Analysis (PCA)
-- Differential gene expression analysis using LIMMA
-- Volcano plot visualization
-- Heatmap generation
-- Functional enrichment analysis (GO and KEGG)
-- Network visualization of enriched biological pathways
+## Project Overview
 
----
+This project presents a bulk transcriptomic analysis of the public GEO dataset **GSE20916**, comparing gene expression profiles across **normal tissue, adenoma, and carcinoma samples**. The aim was to identify transcriptomic changes associated with colorectal cancer progression and interpret them using differential expression and pathway enrichment analysis.
 
-# Dataset
+Although the dataset is microarray-based, the workflow follows a classic bulk transcriptomics pipeline: quality assessment, dimensionality reduction, differential expression analysis, gene annotation, functional enrichment, and biological interpretation.
 
-- **Source:** GEO (Gene Expression Omnibus)
-- **Dataset ID:** GSE20916
-- **Platform:** Microarray transcriptomic dataset
-- **Biological context:** Adenoma-carcinoma progression in colorectal cancer
+## Methods
 
-Dataset link:
-[https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20916](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20916)
+The analysis was performed in **R** using Bioconductor and visualization packages.
 
----
+Main steps included:
 
-# Tools and Libraries
+* Downloading and processing GEO expression data with `GEOquery`
+* Sample grouping into Normal, Adenoma, and Cancer groups
+* Quality control and exploratory analysis using PCA
+* Differential expression analysis with `limma`
+* Volcano plot visualization with upregulated, downregulated, and non-significant genes
+* Probe-to-gene annotation and gene-level heatmap visualization
+* GO Biological Process enrichment analysis using `clusterProfiler`
+* KEGG pathway enrichment analysis
+* Enrichment network visualization with `enrichplot`
 
-## R packages used
+## Tools and Packages
 
-```r
-library(GEOquery)
-library(ggplot2)
-library(limma)
-library(clusterProfiler)
-library(enrichplot)
-library(pheatmap)
-library(RColorBrewer)
-library(org.Hs.eg.db)
-library(patchwork)
-library(ggrepel)
-```
+* R
+* GEOquery
+* limma
+* ggplot2
+* ggrepel
+* pheatmap
+* clusterProfiler
+* enrichplot
+* org.Hs.eg.db
+* patchwork
+* RColorBrewer
 
----
+## Key Results
 
-# Workflow
+### Principal Component Analysis
 
-## 1. Data Acquisition
-
-- Downloaded expression data from GEO using GEOquery
-- Extracted expression matrix and metadata
-- Assigned biological groups:
-    - Normal
-    - Adenoma
-    - Cancer
-
----
-
-## 2. Quality Control and PCA
-
-Principal Component Analysis (PCA) was performed to evaluate transcriptomic separation between biological groups.
+PCA showed a clear transcriptomic separation between normal samples and disease-associated samples. Adenoma and carcinoma samples partially overlapped, which is biologically consistent with a progression model from normal tissue to adenoma and carcinoma.
 
 ![PCA_Plots](figures/1_PCA_plot.png)
 
-### Observation
+### Differential Expression Analysis
 
-- Normal samples clustered separately from tumor samples
-- Adenoma and carcinoma samples showed partial overlap
-- Results suggest progressive transcriptomic changes during tumor development
+Differential expression analysis identified strong gene expression changes in all comparisons:
 
----
+* Cancer vs Normal
+* Adenoma vs Normal
+* Adenoma vs Cancer
 
-## 3. Differential Expression Analysis
-
-Differential expression analysis was performed using the LIMMA package.
-
-### Comparisons
-- Cancer vs Normal
-- Adenoma vs Normal
-- Adenoma vs Cancer
-
-Genes were filtered based on:
-- adjusted p-value < 0.05
-- |logFC| > 1
-
----
-
-## 4. Volcano Plots
-Volcano plots were generated to visualize significantly upregulated and downregulated genes.
+Volcano plots highlighted both upregulated and downregulated genes. Several cancer-relevant genes appeared among the top differentially expressed genes, including markers related to extracellular matrix remodeling, epithelial changes, and tumor progression.
 
 ![Volcano Plots](figures/2_Volcano_plots.png)
 
-### Key observations
-- Cancer vs Normal showed the strongest transcriptomic differences
-- Adenoma vs Cancer displayed fewer differentially expressed genes
-- Results are consistent with biological progression from normal tissue to carcinoma
+### Heatmap Analysis
 
----
-
-## 5. Heatmap Analysis
-Top differentially expressed genes were visualized using a heatmap.
+The gene-level heatmap of top differentially expressed genes showed distinct expression patterns across Normal, Adenoma, and Cancer groups. Normal samples displayed a clearly different expression profile compared with adenoma and carcinoma samples, supporting the presence of strong disease-associated transcriptomic changes.
 
 ![Heatmap_Analysis](figures/3_Heatmap_Analysis.png)
 
-### Key observations
-- Normal samples formed a distinct expression cluster
-- Adenoma and carcinoma samples showed more similar expression profiles
-- Several genes associated with colorectal cancer progression were identified:
-    - MMP7
-    - CD44
-    - CLDN8
-    - CHGA
+### Functional Enrichment
 
----
+#### GO enrichment analysis highlighted biological processes related to:
 
-## 6. Functional Enrichment Analysis
-Gene Ontology (GO) and KEGG enrichment analyses were performed using clusterProfiler.
+* extracellular matrix organization
+* connective tissue development
+* hormone and metabolic processes
+* metal ion and detoxification responses
+* cell-substrate adhesion and tissue remodeling
 
-GO enrichment dotplots
 ![GO_dotplots](figures/4_GO_dotplots.png)
 
-KEGG pathway analysis
+#### KEGG enrichment identified pathways associated with:
+
+* cytokine-cytokine receptor interaction
+* IL-17 signaling
+* NF-kappa B signaling
+* protein digestion and absorption
+* mineral absorption
+* metabolism of xenobiotics by cytochrome P450
+
 ![KEGG_dotplots](figures/5_KEGG_dotplots.png)
 
-### Biological processes identified
-Examples included:
-- extracellular matrix organization
-- cell proliferation
-- signaling pathways associated with tumor progression
-Network visualization was generated using enrichment maps.
+These results suggest involvement of inflammatory signaling, extracellular matrix remodeling, metabolic changes, and tissue organization during colorectal cancer progression.
 
----
+## Visualizations
 
-# Results
-PCA demonstrated progressive transcriptomic separation from normal tissue to adenoma and carcinoma.
-Differential expression analysis identified strong dysregulation of extracellular matrix remodeling and hypoxia-associated genes.
-KEGG enrichment highlighted cancer-associated pathways including p53 signaling, chemokine signaling, and tight junction remodeling.
-GO analysis suggested activation of hypoxia response and fibroblast proliferation processes during tumor progression.
-Overall, the results support the biological model of adenoma-to-carcinoma progression.
-
----
-
-# Visualizations
 The repository includes:
-- PCA plot
-- Volcano plots
-- Heatmap
-- GO enrichment dotplots
-- KEGG pathway analysis
-- Enrichment network plots
 
----
+* PCA plot
+* Volcano plots with labeled top genes
+* Gene-level heatmap
+* GO Biological Process dotplots
+* KEGG pathway enrichment dotplots
+* GO enrichment network plot
 
-# Skills Demonstrated
-This project demonstrates practical experience with:
-- Bulk transcriptomics analysis
-- GEO data retrieval
-- Differential gene expression analysis
-- LIMMA workflow
-- Functional enrichment analysis
-- Data visualization in R
-- Biological interpretation of transcriptomic data
+## Interpretation
 
----
+The results support a biologically meaningful progression pattern from normal tissue to adenoma and carcinoma. Normal samples form a distinct transcriptomic group, while adenoma and cancer samples show partially overlapping profiles. This suggests that adenoma already shares many molecular features with carcinoma, while still retaining distinct gene expression changes.
 
-# Future Improvements
-- Potential future extensions:
-- Batch effect correction
-- Additional normalization methods
-- Integration with RNA-seq datasets
-- Survival analysis
-- Machine learning classification models
-- Interactive visualizations
+The enrichment results point toward extracellular matrix remodeling, inflammatory signaling, and metabolic pathway alterations as important biological processes in disease progression.
 
-Author
-Dominika Brosch
-GitHub: [Your GitHub Profile] LinkedIn: [Your LinkedIn]
+## Limitations
+
+* The dataset is microarray-based rather than RNA-seq-based.
+* Batch effects were not deeply modeled beyond exploratory PCA.
+* The analysis is based on public data and would require additional validation in independent cohorts.
+* Functional enrichment results are hypothesis-generating and should be interpreted biologically rather than as direct proof of pathway activity.
+
+## Future Improvements
+
+Possible extensions of this project include:
+
+* adding batch-effect assessment and correction if needed
+* performing separate enrichment analysis for upregulated and downregulated genes
+* validating selected genes in an independent GEO or TCGA dataset
+* adding survival analysis using external clinical datasets
+* comparing results with known colorectal cancer marker genes
+
+## Summary
+
+This project demonstrates a complete bulk transcriptomics workflow in R, including data acquisition, preprocessing, differential expression analysis, visualization, functional enrichment, and biological interpretation. It is suitable as a portfolio project for bioinformatics, computational biology, or biomedical data science applications.
