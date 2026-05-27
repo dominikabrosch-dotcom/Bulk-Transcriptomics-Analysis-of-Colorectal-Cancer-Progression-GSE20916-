@@ -1,12 +1,12 @@
 # Figures
 
-## PCA and volcano plots
-
-### PCA Plot
+## PCA plot
 
 PCA showed a clear separation between normal and disease-associated samples. Adenoma and carcinoma samples partially overlapped, supporting a progression pattern from normal tissue to adenoma and carcinoma.
 
-### Volcano Plots
+---
+
+## Volcano Plots
 
 Volcano plots identified significantly upregulated and downregulated genes across all comparisons.
 - Cancer vs Normal showed the strongest transcriptomic differences.
