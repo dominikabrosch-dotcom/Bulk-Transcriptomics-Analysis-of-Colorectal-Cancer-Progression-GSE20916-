@@ -82,6 +82,10 @@ Genes were filtered based on:
 - adjusted p-value < 0.05
 - |logFC| > 1
 
+
+PCA and Volcano plots
+![PCA_and_Volcano Plots](figures/1_PCA_and_Volcano Plots.png)
+
 ---
 
 ## 4. Volcano Plots
@@ -97,7 +101,7 @@ Volcano plots were generated to visualize significantly upregulated and downregu
 ## 5. Heatmap Analysis
 Top differentially expressed genes were visualized using a heatmap.
 
-![2_Heatmap_Analysis.png](figures/2_Heatmap_Analysis.png)
+![Heatmap_Analysis](figures/2_Heatmap_Analysis.png)
 
 ### Key observations
 - Normal samples formed a distinct expression cluster
@@ -114,10 +118,10 @@ Top differentially expressed genes were visualized using a heatmap.
 Gene Ontology (GO) and KEGG enrichment analyses were performed using clusterProfiler.
 
 GO enrichment dotplots
-![3_GO_enrichment_dotplots.png](figures/3_GO_enrichment_dotplots.png)
+![GO_enrichment_dotplots](figures/3_GO_enrichment_dotplots.png)
 
 KEGG pathway analysis
-![4_KEGG_pathway_analysis.png](figures/4_KEGG_pathway_analysis.png)
+![KEGG_pathway_analysis](figures/4_KEGG_pathway_analysis.png)
 
 ### Biological processes identified
 Examples included:
@@ -137,8 +141,8 @@ Overall, the results support the biological model of adenoma-to-carcinoma progre
 
 ---
 
-# Example Visualizations
-Recommended figures to include in the repository:
+# Visualizations
+The repository includes:
 - PCA plot
 - Volcano plots
 - Heatmap
