@@ -121,7 +121,3 @@ Possible extensions of this project include:
 * validating selected genes in an independent GEO or TCGA dataset
 * adding survival analysis using external clinical datasets
 * comparing results with known colorectal cancer marker genes
-
-## Summary
-
-This project demonstrates a complete bulk transcriptomics workflow in R.
