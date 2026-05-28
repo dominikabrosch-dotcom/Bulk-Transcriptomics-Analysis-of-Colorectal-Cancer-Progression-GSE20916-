@@ -121,3 +121,9 @@ Possible extensions of this project include:
 * validating selected genes in an independent GEO or TCGA dataset
 * adding survival analysis using external clinical datasets
 * comparing results with known colorectal cancer marker genes
+
+---
+
+### Author
+
+Dominika Brosch
