@@ -6,7 +6,7 @@ This project presents a bulk transcriptomic analysis of the public GEO dataset *
 
 Although the dataset is microarray-based, the workflow follows a classic bulk transcriptomics pipeline: quality assessment, dimensionality reduction, differential expression analysis, gene annotation, functional enrichment, and biological interpretation.
 
-## Methods
+## Analysis workflow
 
 The analysis was performed in **R** using Bioconductor and visualization packages.
 
@@ -23,7 +23,7 @@ Main steps included:
 * KEGG pathway enrichment analysis
 * Enrichment network visualization with `enrichplot`
 
-## Tools and Packages
+## Software
 
 * R
 * GEOquery
@@ -88,18 +88,7 @@ The gene-level heatmap of top differentially expressed genes showed distinct exp
 
 These results suggest involvement of inflammatory signaling, extracellular matrix remodeling, metabolic changes, and tissue organization during colorectal cancer progression.
 
-## Visualizations
-
-The repository includes:
-
-* PCA plot
-* Volcano plots with labeled top genes
-* Gene-level heatmap
-* GO Biological Process dotplots
-* KEGG pathway enrichment dotplots
-* GO enrichment network plot
-
-## Interpretation
+### Interpretation
 
 The results support a biologically meaningful progression pattern from normal tissue to adenoma and carcinoma. Normal samples form a distinct transcriptomic group, while adenoma and cancer samples show partially overlapping profiles. This suggests that adenoma already shares many molecular features with carcinoma, while still retaining distinct gene expression changes.
 
@@ -111,16 +100,6 @@ The enrichment results point toward extracellular matrix remodeling, inflammator
 * Batch effects were not deeply modeled beyond exploratory PCA.
 * The analysis is based on public data and would require additional validation in independent cohorts.
 * Functional enrichment results are hypothesis-generating and should be interpreted biologically rather than as direct proof of pathway activity.
-
-## Future Improvements
-
-Possible extensions of this project include:
-
-* adding batch-effect assessment and correction if needed
-* performing separate enrichment analysis for upregulated and downregulated genes
-* validating selected genes in an independent GEO or TCGA dataset
-* adding survival analysis using external clinical datasets
-* comparing results with known colorectal cancer marker genes
 
 ---
 
